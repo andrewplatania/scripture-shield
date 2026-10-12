@@ -1,0 +1,6 @@
+.claude
+dist/
+go/web/
+go/*.syso
+node_modules/
+*.exe

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scripture Shield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+        <span>Scripture Shield</span>
+      </div>
+      <div class="counter" id="counter" aria-live="off"></div>
+    </header>
+
+    <main class="stage">
+      <button class="nav" id="prev" type="button" aria-label="Previous passage">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+
+      <article class="card" id="card" aria-live="polite">
+        <p class="kicker">It is written. Say it out loud.</p>
+        <blockquote class="verse" id="verse"></blockquote>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="ref" id="ref"></p>
+      </article>
+
+      <button class="nav" id="next" type="button" aria-label="Next passage">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </main>
+
+    <footer class="foot">
+      <div class="seg" role="group" aria-label="Bible translation">
+        <button type="button" class="seg-btn" data-tr="kjv" aria-pressed="true" title="King James Version">KJV</button>
+        <button type="button" class="seg-btn" data-tr="bsb" aria-pressed="false" title="Berean Standard Bible">BSB</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="verses.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
